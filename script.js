@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const maxRolls = 10;
     const rollInterval = setInterval(() => {
       const tempValue = Math.floor(Math.random() * 6) + 1;
-      diceImage.src = `./assets/dice-${tempValue}.png`;
+      diceImage.src = `dice-${tempValue}.png`;
       diceImage.classList.add("rolling");
       
       if (diceRollSound) {
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function completeDiceRoll() {
     // Final dice value
     const diceValue = Math.floor(Math.random() * 6) + 1;
-    diceImage.src = `./assets/dice-${diceValue}.png`;
+    diceImage.src = `dice-${diceValue}.png`;
     diceImage.classList.remove("rolling");
     gameState.isRolling = false;
     rollBtn.disabled = false;
