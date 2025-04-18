@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <title>Dice Game</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1><i class="fas fa-dice"></i> Dice Game</h1>
+      <div class="game-info">
+        <h2>Round: <span id="round">1</span></h2>
+        <div id="playerScores">
+          <div class="score-display">P1: <span id="player1Score">0</span></div>
+          <div class="score-display">P2: <span id="player2Score">0</span></div>
+        </div>
+      </div>
+      
+      <div class="dice-container">
+        <img
+          class="dice-image"
+          id="diceImage"
+          src="./assets/dice-1.png"
+          alt="dice"
+        />
+      </div>
+      
+      <div class="players-container">
+        <div class="player" id="player1">
+          <h2>Player 1</h2>
+          <div class="points" id="playerOnePoints">
+            <span class="point"></span>
+            <span class="point"></span>
+            <span class="point"></span>
+          </div>
+        </div>
+        <div class="player" id="player2">
+          <h2>Player 2</h2>
+          <div class="points" id="playerTwoPoints">
+            <span class="point"></span>
+            <span class="point"></span>
+            <span class="point"></span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="controls">
+        <button id="rollBtn" class="btn primary-btn">
+          <i class="fas fa-dice"></i> Roll Dice
+        </button>
+        <button class="btn secondary-btn playNextRoundBtn" id="playNextRoundBtn">
+          <i class="fas fa-forward"></i> Next Round
+        </button>
+        <button class="btn secondary-btn playAgainBtn" id="playAgainBtn">
+          <i class="fas fa-redo"></i> Play Again
+        </button>
+      </div>
+      
+      <div id="winnerMessage" class="message"></div>
+    </div>
+    
+    <!-- Audio elements -->
+    <audio id="diceRollSound" src="./assets/dice-roll.mp3" preload="auto"></audio>
+    <audio id="winSound" src="./assets/win-sound.mp3" preload="auto"></audio>
+    
+    <script src="script.js"></script>
+  </body>
+</html>
